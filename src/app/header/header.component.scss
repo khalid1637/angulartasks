@@ -1,0 +1,8 @@
+.navbar {
+    .navbar-toggler {
+        order: -1; // Move the toggle button to the left
+    }
+    .form-inline {
+        flex: 1; // Make the search bar expand and fill the available space
+    }
+}

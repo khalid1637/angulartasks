@@ -1,0 +1,46 @@
+<div class="container pt-4">
+  <div class="card">
+
+    <div class="card-body">
+      <b>Recent order</b>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">customer</th>
+            <th scope="col">Products</th>
+            <th scope="col">Delivery Date</th>
+            <th scope="col">Status</th>
+            <th scope="col">Tracking </th>
+            <th scope="col">Shipping</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let datas of result.recent_orders">
+            <td>{{datas.name}}</td>
+            <td>{{datas.product}}</td>
+
+            <td>{{datas.delivery_date | date:'MMM d, y h:mm a'}}</td>
+            <td>
+              <div [ngClass]="{
+        'status-failed':datas.status === 'Failed',
+        'status-pending': datas.status === 'Pending',
+        'status-paid': datas.status === 'Paid'
+      }">
+                {{ datas.status }}
+              </div>
+            </td>
+            <td>{{datas.tracking_no}}</td>
+            <td>{{datas.shipping}}</td>
+            <td>X</td>
+
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,39 @@
+<div class="container  pt-4">
+
+  <div class="card">
+
+    <div class="card-body">
+
+      <b>User Registration</b>
+      <div *ngFor="let datas of respData.new_users">
+       <div class="row ">
+         <div class=" center col-2  mt-2" >
+           <img [src]="datas.picture" alt="Customer Picture">
+         </div>
+         <div class=" col-3 mt-2 ">
+           <p ><b> {{datas.name}} </b></p>
+           
+           <p class="">{{datas.country}}</p>
+         </div>
+     
+         <div class="col-3">
+           <input type="range" class="form-range" min="0" max="5" id="customRange2">
+         </div>
+         <div class="col-2">
+            <p>{{datas.progress}}</p>
+         </div>
+     
+         <div class="col-2">
+           <p>{{datas.isActive}}</p>
+         </div>
+     
+       </div>
+     </div>
+    </div>
+  </div>
+ 
+
+</div>
+
+
+
